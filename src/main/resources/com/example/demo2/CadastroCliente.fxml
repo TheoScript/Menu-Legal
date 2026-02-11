@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.controller.ClienteController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#72b8b0" height="76.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="651.0" />
+        <Label layoutX="163.0" layoutY="4.0" prefHeight="59.0" prefWidth="367.0" text="CADASTRO DE CLIENTE" textFill="WHITE">
+            <font>
+                <Font name="Franklin Gothic Demi" size="35.0" />
+            </font>
+        </Label>
+        <Label layoutX="53.0" layoutY="128.0" prefHeight="19.0" prefWidth="37.0" text="Nome">
+            <font>
+                <Font name="Modern No. 20" size="15.0" />
+            </font>
+        </Label>
+        <TextField layoutX="102.0" layoutY="127.0">
+            <font>
+                <Font name="Modern No. 20" size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="61.0" layoutY="164.0" prefHeight="19.0" prefWidth="29.0" text="CPF">
+            <font>
+                <Font name="Modern No. 20" size="15.0" />
+            </font>
+        </Label>
+        <TextField layoutX="102.0" layoutY="163.0">
+            <font>
+                <Font name="Modern No. 20" size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="38.0" layoutY="200.0" prefHeight="19.0" prefWidth="52.0" text="Telefone">
+            <font>
+                <Font name="Modern No. 20" size="15.0" />
+            </font>
+        </Label>
+        <TextField layoutX="102.0" layoutY="199.0">
+            <font>
+                <Font name="Modern No. 20" size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="46.0" layoutY="236.0" prefHeight="19.0" prefWidth="50.0" text="E-mail">
+            <font>
+                <Font name="Modern No. 20" size="15.0" />
+            </font>
+        </Label>
+        <TextField layoutX="102.0" layoutY="235.0">
+            <font>
+                <Font name="Modern No. 20" size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="35.0" layoutY="272.0" prefHeight="19.0" prefWidth="58.0" text="Endereço">
+            <font>
+                <Font name="Modern No. 20" size="15.0" />
+            </font>
+        </Label>
+        <TextField layoutX="102.0" layoutY="271.0">
+            <font>
+                <Font name="Modern No. 20" size="12.0" />
+            </font>
+        </TextField>
+        <Button layoutX="30.0" layoutY="79.0" mnemonicParsing="false" text="Retornar">
+            <font>
+                <Font name="Modern No. 20" size="15.0" />
+            </font>
+        </Button>
+        <Button layoutX="44.0" layoutY="324.0" mnemonicParsing="false" text="Salvar">
+            <font>
+                <Font name="Modern No. 20" size="15.0" />
+            </font>
+        </Button>
+        <Button layoutX="152.0" layoutY="324.0" mnemonicParsing="false" text="Apagar">
+            <font>
+                <Font name="Modern No. 20" size="15.0" />
+            </font>
+        </Button>
+        <TableView layoutX="264.0" layoutY="77.0" prefHeight="315.0" prefWidth="375.0">
+            <columns>
+                <TableColumn editable="false" prefWidth="75.0" text="Nome" />
+                <TableColumn editable="false" prefWidth="75.0" text="CPF" />
+                <TableColumn editable="false" prefWidth="75.0" text="Telefone" />
+                <TableColumn editable="false" prefWidth="75.0" text="E-mail" />
+                <TableColumn editable="false" prefWidth="75.0" text="Endereço" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

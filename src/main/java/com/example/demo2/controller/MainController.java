@@ -1,48 +1,35 @@
 package com.example.demo2.controller;
 
-import javafx.fxml.FXML;
+import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 
-public class
-MainController {
+public class MainController extends Application {
 
-    @FXML
-    private BorderPane root;
+    private static Scene scene;
 
-    @FXML
-    public void abrirHome() {
-        carregartela("Home.fxml");
+    @Override
+    public void start(Stage stage) throws IOException {
+        scene = new Scene(loadFXML("MainLayout.fxml"), 600, 400);
+        stage.setTitle("Sistemas de Vendas");
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @FXML
-    public void abrirCadastro() {
-        carregartela("Cadastro.fxml");
+    public static void setRoot(String fxml) throws IOException {
+        scene.setRoot(loadFXML(fxml));
     }
 
-    @FXML
-    public void abrirCliente() {
-        carregartela("Cliente.fxml");
+    public static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource(fxml));
+        return fxmlLoader.load();
     }
 
-    @FXML
-    public void abrirProdutos() {
-        carregartela("Produtos.fxml");
-    }
-
-    @FXML
-    public void abrirAjuda() {
-        carregartela("Ajuda.fxml");
-    }
-
-    private void carregartela(String fxml) {
-        try {
-            root.setCenter(
-                    FXMLLoader.load(getClass().getResource("/fxml/" + fxml))
-            );
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) {
+        launch();
     }
 }
